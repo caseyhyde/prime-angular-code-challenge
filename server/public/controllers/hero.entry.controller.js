@@ -11,6 +11,7 @@ app.controller("HeroEntryController", ["$http", function($http) {
     $http.post('/heroes', self.newHero)
       .then(function(response) {
         console.log("New hero added to database!");
+        self.newHero = {};
       })//end then
   }
 

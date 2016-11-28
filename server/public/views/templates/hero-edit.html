@@ -1,14 +1,16 @@
 <h1>HERO LISTING AND REMOVAL</h1>
 <div>
-  <table>
-    <thead>
-      <td>Persona</td>
-      <td>Alias</td>
-      <td>Power ID</td>
-      <td>Power Description</td>
+  <table class= "table table-striped table-bordered table-hover table-condensed">
+    <thead class="thead-default">
+      <tr>
+        <th>Persona</th>
+        <th>Alias</th>
+        <th>Power ID</th>
+        <th>Power Description</th>
+      </tr>
     </thead>
     <tbody>
-      <tr ng-repeat="hero in edit.heroes">
+      <tr ng-repeat="hero in edit.heroes | orderBy:'power_id'">
         <td>{{hero.persona}}</td>
         <td>{{hero.alias}}</td>
         <td>{{hero.power_id}}</td>
