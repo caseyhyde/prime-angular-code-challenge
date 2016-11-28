@@ -1,1 +1,20 @@
 <h1>HERO LISTING AND REMOVAL</h1>
+<div>
+  <table>
+    <thead>
+      <td>Persona</td>
+      <td>Alias</td>
+      <td>Power ID</td>
+      <td>Power Description</td>
+    </thead>
+    <tbody>
+      <tr ng-repeat="hero in edit.heroes">
+        <td>{{hero.persona}}</td>
+        <td>{{hero.alias}}</td>
+        <td>{{hero.power_id}}</td>
+        <td>{{hero.description}}</td>
+        <td><button ng-click="edit.deleteHero(hero)">DELETE</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
