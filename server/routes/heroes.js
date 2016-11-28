@@ -32,7 +32,7 @@ router.post('/', function (req, res) {
   pool.connect()
     .then(function (client) {
       client.query('INSERT INTO heroes (persona, alias, power_id) VALUES ($1, $2, $3)',
-        [newHero.persona, newHero.alias, newHero.power_id])
+        [newHero.persona, newHero.alias, newHero.power])
         .then(function (result) {
           client.release();
           res.sendStatus(201);

@@ -1,6 +1,6 @@
 var app = angular.module('app', ['ngRoute']);
 
-app.config([$routeProvider], function($routeProvider) {
+app.config(['$routeProvider', function($routeProvider) {
   $routeProvider
     .when('/heroentry', {
       templateUrl: '/views/templates/hero-entry.html',
@@ -9,10 +9,10 @@ app.config([$routeProvider], function($routeProvider) {
     })
     .when('/heroedit', {
       templateUrl: '/views/templates/hero-edit.html',
-      controler: 'HeroEditController',
+      controller: 'HeroEditController',
       controllerAs: 'edit'
     })
     .otherwise({
-      redirectTo: 'heroentry'
+      redirectTo: 'heroedit'
     })
-})
+}]);
